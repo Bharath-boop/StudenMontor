@@ -1,6 +1,7 @@
 import mongoos from "./index.js";
 import dotenv from 'dotenv'
 dotenv.config()
+
 const validateEmail = (email) => {
     return String(email)
         .toLowerCase()
