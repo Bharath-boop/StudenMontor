@@ -38,18 +38,7 @@ const studentSchema = new mongoos.Schema({
         type: Date,
         default: Date.now()
     },
-    mentor: {
-        name: String,
-        mentor_id: {
-            type: mongoos.Schema.Types.ObjectId,
-            ref: 'mentor'
-        },
-        status: {
-            type: Boolean,
-            default: false
-        }
-
-    }
+   
 }, {
     collection: 'student',
     versionKey: false
@@ -80,14 +69,7 @@ const mentorSchema = new mongoos.Schema({
     createdAt: {
         type: Date,
         default: Date.now()
-    },
-    student: [
-        {
-            name: String,
-            student_id: String,
-            _id: false
-        }
-    ]
+    }
 }, {
     collection: 'mentor',
     versionKey: false
